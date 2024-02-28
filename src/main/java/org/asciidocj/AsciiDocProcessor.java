@@ -108,6 +108,10 @@ public class AsciiDocProcessor {
 		return parser.parse(prepareSource(asciidocSource));
 	}
 
+	public DocumentNode parseAsciidoc(String asciidocSource) {
+		return parseAsciidoc(asciidocSource.toCharArray());
+	}
+
 	/**
 	 * Adds two trailing newlines.
 	 * 

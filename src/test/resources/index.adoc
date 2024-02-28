@@ -1,0 +1,128 @@
+= Asciidoctor Documentation Site
+:navtitle: Home
+:description: Home of the documentation for Asciidoctor and family. Find reference material, guides, and examples to write content in AsciiDoc and publish it using Asciidoctor.
+:page-role: home
+:page-aliases: home.adoc
+
+Welcome to the Asciidoctor documentation site!
+Here <<search-tips,you can find>> the reference material, guides, and examples to write content in AsciiDoc and publish it using Asciidoctor.
+This documentation will help you start your journey with AsciiDoc or dive deeper if you're already well on your way.
+
+[.panel]
+--
+[discrete]
+== xref:asciidoc::index.adoc[Learn about AsciiDoc]
+
+AsciiDoc is a plain text authoring format (i.e., lightweight markup language) for writing technical content such as documentation, articles, and books.
+If you're just starting out with AsciiDoc, or want to discover what it's all about, head over to the xref:asciidoc::index.adoc[documentation for the AsciiDoc Language].
+You'll learn everything from how to make your first AsciiDoc document to how to use advanced language features such as list continuations and tailoring substitutions.
+
+If you need a condensed refresher, or want a glimpse of what AsciiDoc has to offer, check out the xref:asciidoc::syntax-quick-reference.adoc[syntax quick reference].
+You can also find a side-by-side xref:asciidoc::asciidoc-vs-markdown.adoc[comparison with Markdown] if you're looking to upgrade.
+--
+
+[.panel]
+--
+[discrete]
+== xref:asciidoctor::index.adoc[Process your AsciiDoc content]
+
+The AsciiDoc language documentation is primarily about the source you type to compose a document.
+Once you're done writing and want to publish your AsciiDoc document, you'll need an AsciiDoc processor.
+That's where Asciidoctor fits in.
+
+xref:asciidoctor::index.adoc[Asciidoctor] is the core AsciiDoc processor.
+It reads the AsciiDoc source, parses it into a document model, and converts it to a publishable format such as HTML using a converter.
+Asciidoctor has both a xref:asciidoctor:cli:index.adoc[CLI] and an xref:asciidoctor:api:index.adoc[API] that you can use to invoke a built-in converter (HTML, DocBook, man page) or an add-on converter.
+Asciidoctor enriches the HTML it produces from AsciiDoc by applying a xref:asciidoctor:html-backend:default-stylesheet.adoc[default stylesheet], adding stylistic icons, and xref:asciidoctor:syntax-highlighting:index.adoc[syntax highlighting] source blocks.
+--
+
+[discrete]
+=== Choose a processor
+
+There are three variants of the core Asciidoctor processor that all share the same code base.
+With few exceptions, these variants all provide the full Asciidoctor experience.
+From these three implementations extend a host of extensions, build tool integrations, and tooling plugins in the xref:about::index.adoc[Asciidoctor community] and beyond.
+Choose the one that best suits the language platform you're using.
+
+[.grid.has-emblems]
+xref:asciidoctor::index.adoc[Asciidoctor] [.emblem]#Ruby#::
+The original code base enables you to run Asciidoctor using any Ruby implementation, including C Ruby, JRuby, and TruffleRuby.
+JRuby and TruffleRuby allow you to use Asciidoctor on a JVM.
+
+xref:asciidoctor.js::index.adoc[Asciidoctor.js] [.emblem]#JavaScript#::
+Transpiles Asciidoctor into JavaScript so you can run it in the browser or a Node.js application.
+It provides a CLI as well as a porcelain API for methods in the Asciidoctor document model and even enables you to write Asciidoctor extensions in JavaScript.
+
+xref:asciidoctorj::index.adoc[AsciidoctorJ] [.emblem]#Java/JVM#::
+A Java library that encapsulates the use of JRuby to load and run Asciidoctor on the JVM.
+It provides a CLI as well as native Java API wrappers for all of the Asciidoctor APIs and even enables you to write Asciidoctor extensions in Java.
+
+[discrete]
+=== Explore Asciidoctor
+
+[.grid]
+Build automation::
+Convert your content from AsciiDoc automatically when you run your build.
+Encapsulate assets, configuration profiles, and extensions for your publishing process in your build scripts.
+Even extract and convert AsciiDoc inside Javadoc comments or include snippets from your test suite.
+
+* xref:maven-tools::index.adoc[Maven tools]
+* xref:asciidoclet::index.adoc[Asciidoclet (for Javadoc)]
+//* *Gradle plugin*
+
+Extensions::
+Author HTML slide presentations in AsciiDoc without having to wrestle with the clutter of HTML or add diagrams to the output file that are generated from plain text markup inside your AsciiDoc document using extensions.
+The possiblities are boundless!
+
+* xref:reveal.js-converter::index.adoc[reveal.js converter]
+* xref:diagram-extension::index.adoc[Diagram extension]
+
+Site generation::
+Want to build a documentation site like this one?
+Write the content for the site in AsciiDoc.
+A static site generator delegates to an AsciiDoc processor to convert the AsciiDoc files to embedded HTML, then applies a template to that HTML to generate pages for the site.
+
+* https://antora.org[Antora^]
+
+Essential reference::
+Keep this essential reference material for writing and publishing content with AsciiDoc and Asciidoctor close at hand.
+
+* xref:asciidoc::syntax-quick-reference.adoc[AsciiDoc syntax quick reference]
+* xref:asciidoc:attributes:document-attributes-reference.adoc[Document attributes]
+* xref:asciidoctor:cli:index.adoc[CLI reference]
+* xref:asciidoctor:api:index.adoc[API reference]
+
+[discrete#search-tips]
+=== How to search the docs
+
+On any page, you can press kbd:[s] or kbd:[Ctrl,/] to focus the search box.
+Enter one or more terms (i.e., a query) to search the documentation.
+Alternately, you can press kbd:[Ctrl,<] (i.e., kbd:[Ctrl,Shift,,] on a US keyboard) to restore the previous search.
+
+As you type your query, the search results will be displayed in a panel immediately below the search box.
+You can browse the list of search results and navigate to a result using either the mouse or the keyboard.
+
+To navigate to a result in the current tab using the mouse, hover over it with the mouse cursor and click on it using the left mouse button.
+If you want to keep the search results open while you're looking for the best result, you can open the result in a new tab.
+To open a result in a new tab, either hold down kbd:[Ctrl] when you click the result, or right click on it and select "Open link in new tab".
+To clear the search, click anywhere outside of the panel of search results.
+
+To navigate to a result using the keyboard, first use the up and down arrow keys to choose a result.
+This action will highlight the current result with a light blue selection box.
+You can then press kbd:[Enter] when the result is highlighted to navigate to that result in the current tab.
+To open a result in a new tab, press kbd:[Ctrl,Enter] instead.
+To clear the search, press kbd:[Esc].
+
+The search will look for results using fuzzy matching.
+That means it will locate pages with words or phrases that are close to what you entered, but not exactly.
+This strategy helps bridge the gap between your terminology or phrasing with that used in the documentation.
+If you want to look for an exact match, enclose the query in double quotes (e.g., `"the details of the syntax"`).
+You can also quote individual terms to disable the typo tolerance (e.g., `"toc" position`).
+This strategy helps you to find exactly what you're looking for with no false positives.
+However, it will yield less results.
+Another way to narrow the results is to prefix one or more terms with `-` (e.g., `-document`).
+Adding this prefix will exclude results that contain that term.
+
+By default, the search looks for results across the whole documentation site.
+If you want to limit the scope of the search to the documentation for the version of the project you're currently looking at, tick the "In this project" checkbox.
+You can toggle this checkbox when the search results are open to compare the results for the whole site with those for the current project version.
